@@ -1,53 +1,47 @@
-<!DOCTYPE html><html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DarkTrixX +18</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-      background: #111;
-      border-bottom: 1px solid #333;
-    }
-    h1 {
-      font-size: 32px;
-      color: #ff0066;
-      text-shadow: 0 0 10px #ff0066;
-    }
-    .video-container {
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 10px;
-      font-size: 12px;
-      color: #666;
-    }
-  </style>
-</head>
-<body>  <header>
-    <h1>DarkTrixX 🔞</h1>
-    <p>Conteúdo +18 | Proibido para menores</p>
-  </header>  <div class="video-container">
-    <h2>🔥 Vídeo 1 🔥</h2>
-    <iframe src="https://www.xvideos.com/embedframe/26027327" allowfullscreen></iframe>
-  </div>  <div class="video-container">
-    <h2>🔥 Vídeo 2 🔥</h2>
-    <iframe src="https://www.xvideos.com/embedframe/48984709" allowfullscreen></iframe>
-  </div>  <footer>
-    <p>&copy; 2025 DarkTrixX. Todos os direitos reservados.</p>
-  </footer></body>
-</html>
+import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { useState } from "react";
+
+export default function FollowerStore() { const [username, setUsername] = useState(""); const [quantity, setQuantity] = useState("");
+
+const handlePurchase = () => { alert(Pedido de ${quantity} seguidores para @${username} recebido!); };
+
+return ( <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-6"> <h1 className="text-4xl font-bold mb-4">TrixFollowers 🚀</h1> <p className="mb-6 text-center max-w-md"> Compre seguidores para Instagram, TikTok ou qualquer rede social com segurança e rapidez. </p>
+
+<Card className="w-full max-w-md p-6 rounded-2xl shadow-lg bg-gray-800">
+    <CardContent className="flex flex-col gap-4">
+      <Input
+        placeholder="@username ou link do perfil"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        className="bg-gray-700 border-none focus:ring-2 focus:ring-pink-500"
+      />
+
+      <Input
+        placeholder="Quantidade de seguidores"
+        type="number"
+        value={quantity}
+        onChange={(e) => setQuantity(e.target.value)}
+        className="bg-gray-700 border-none focus:ring-2 focus:ring-pink-500"
+      />
+
+      <Button onClick={handlePurchase} className="bg-pink-600 hover:bg-pink-700 rounded-2xl py-2">
+        Comprar Agora
+      </Button>
+    </CardContent>
+  </Card>
+
+  <div className="mt-8 grid grid-cols-1 gap-4 max-w-2xl">
+    <Card className="p-4 bg-gray-800 rounded-2xl shadow">
+      <CardContent>
+        <h2 className="text-xl font-semibold mb-2">Pacotes Populares</h2>
+        <ul className="list-disc ml-5 text-gray-300">
+          <li>100 Seguidores - R$5</li>
+          <li>500 Seguidores - R$20</li>
+          <li>1000 Seguidores - R$35</li>
+        </ul>
+      </CardContent>
+    </Card>
+  </div>
+</div>
+
+); }
+
