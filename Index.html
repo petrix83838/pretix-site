@@ -1,47 +1,51 @@
-import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Input } from "@/components/ui/input"; import { useState } from "react";
-
-export default function FollowerStore() { const [username, setUsername] = useState(""); const [quantity, setQuantity] = useState("");
-
-const handlePurchase = () => { alert(Pedido de ${quantity} seguidores para @${username} recebido!); };
-
-return ( <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center p-6"> <h1 className="text-4xl font-bold mb-4">TrixFollowers 🚀</h1> <p className="mb-6 text-center max-w-md"> Compre seguidores para Instagram, TikTok ou qualquer rede social com segurança e rapidez. </p>
-
-<Card className="w-full max-w-md p-6 rounded-2xl shadow-lg bg-gray-800">
-    <CardContent className="flex flex-col gap-4">
-      <Input
-        placeholder="@username ou link do perfil"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        className="bg-gray-700 border-none focus:ring-2 focus:ring-pink-500"
-      />
-
-      <Input
-        placeholder="Quantidade de seguidores"
-        type="number"
-        value={quantity}
-        onChange={(e) => setQuantity(e.target.value)}
-        className="bg-gray-700 border-none focus:ring-2 focus:ring-pink-500"
-      />
-
-      <Button onClick={handlePurchase} className="bg-pink-600 hover:bg-pink-700 rounded-2xl py-2">
-        Comprar Agora
-      </Button>
-    </CardContent>
-  </Card>
-
-  <div className="mt-8 grid grid-cols-1 gap-4 max-w-2xl">
-    <Card className="p-4 bg-gray-800 rounded-2xl shadow">
-      <CardContent>
-        <h2 className="text-xl font-semibold mb-2">Pacotes Populares</h2>
-        <ul className="list-disc ml-5 text-gray-300">
-          <li>100 Seguidores - R$5</li>
-          <li>500 Seguidores - R$20</li>
-          <li>1000 Seguidores - R$35</li>
-        </ul>
-      </CardContent>
-    </Card>
-  </div>
-</div>
-
-); }
-
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajude Meu Cachorro 🐶🤍</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #444;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .pix {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      word-wrap: break-word;
+      max-width: 90%;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Peço sua ajuda para comprar medicamentos para meu cachorro que está doente 🤍</h1>
+  <img src="https://i.imgur.com/YOUR_IMAGE_LINK.jpg" alt="Cachorro doente">
+  <p>Qualquer valor já ajuda muito 🙏🏽😔</p>
+  <p>Link para doação abaixo 👇</p>  <div class="pix">
+    <strong>Chave Pix:</strong><br>
+    00020101021126580014br.gov.bcb.pix01365dac3e1d-5e22-4c5b-8c16-4d5f97eb03815204000053039865802BR5916GABRIEL H MATIAS6013PRESIDENTE BE62070503***6304F11E
+  </div>  <p style="margin-top: 30px; font-weight: bold;">Obrigado quem puder ajudar 🙏🏽</p>
+  <p>Deus abençoe esses corações bons que ainda existem 🤍🫠</p>
+</body>
+</html>
